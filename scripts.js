@@ -23,18 +23,31 @@
     document.querySelectorAll('.navbar a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
-
+    
             let targetID = this.getAttribute('href');
             let targetSection = document.querySelector(targetID);
-
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'center'
-                });
+    
+            // Check if the screen width is less than or equal to 768px for mobile devices
+            if (window.innerWidth <= 768) {
+                // For mobile devices, scroll to the top of the section
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start' // Change from 'center' to 'start' to align with the top
+                    });
+                }
+            } else {
+                // For larger screens, keep the original behavior to scroll to the center
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                }
             }
         });
     });
+    
 
 
 
@@ -58,20 +71,20 @@
         navBar.querySelectorAll('a').forEach(function(link) {
             link.addEventListener('click', function() {
                 navToggle.checked = false;
-                backArrow.style.display = 'none'; // Hide the back arrow when any link is clicked
+                backArrow.style.display = 'none'; 
             });
         });
 
-        // Optional: Adjust for window resize as before
+        
         window.addEventListener('resize', function() {
             navBar.style.transition = 'none';
         });
 
         // Close menu when the back arrow is clicked
         backArrow.addEventListener('click', function(e) {
-            e.preventDefault(); // Prevent default anchor behavior
-            navToggle.checked = false; // Uncheck the toggle
-            backArrow.style.display = 'none'; // Hide the back arrow
+            e.preventDefault();
+            navToggle.checked = false; 
+            backArrow.style.display = 'none';
         });
     });
 
