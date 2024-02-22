@@ -1,0 +1,521 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    
+
+
+    <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+    .cool-looking-name {
+        margin-left: 25px;
+        font-family: 'Righteous', cursive;
+        font-size: 48px;
+        background: -webkit-linear-gradient(left, #007bff, #8811c5);
+        background-clip: text;
+        color: transparent;
+
+        background-size: 200% 100%;
+        animation: moveGradient 2s linear infinite;
+        display: inline-block;
+    }
+
+    @keyframes moveGradient {
+
+        0%, 100% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+    }
+
+
+    #about {
+        text-align: center; 
+        padding: 20px;
+    }
+
+    #about h2 {
+        margin-top: 40px; 
+    }
+
+    .about-content {
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        gap: 100px; 
+    }
+
+    #about p {
+        flex: 1; 
+        max-width: 50%;
+        text-align: center; 
+    }
+
+    #about img {
+        flex: 1; 
+        border-radius: 05%; 
+        width: 200px; 
+        height: auto;
+    }
+
+
+
+    #goals .goals-content {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px; /* Add padding for spacing */
+    }
+
+    #goals .goals-text {
+        margin-right: 100px; 
+        text-align: center;
+       
+    }
+
+    #goals .goals-media {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    #goals .goals-media .aspiring-title {
+        margin-bottom: 15px; 
+        font-size: 20px; 
+        text-align: center;
+        color: #007bff; 
+    }
+
+    #goals .goals-media img {
+        max-width: 350px; /* Adjust based on your preference */
+        max-height: auto;
+        margin-bottom: 10px; /* Space between image and download button */
+    }
+
+    #goals a button {
+        padding: 10px 20px;
+        background: -webkit-linear-gradient(left, #007bff, #8811c5);
+        background-size: 200% 100%;
+        animation: moveGradient 4s linear infinite;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        cursor: pointer; /* Ensure it looks clickable */
+        text-decoration: none; /* Remove any underline from links */
+    }
+
+    
+
+
+        #skills {
+            margin-top: 350px;
+        }
+        #goals {
+            margin-top: 350px;
+        }
+
+        #projects {
+            margin-top: 350px;
+        }
+
+        #contact {
+            margin-top: auto;
+            padding-top: 100px;
+            margin-bottom: auto;
+        }
+
+
+    
+
+        
+
+    article {
+        
+        padding: 15px;
+        border-radius: 20px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        margin-bottom: 5px;
+        
+    }
+        article:hover {
+            transform: translateY(-5px); 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+        }
+        
+
+    
+        .navbar {
+            position: fixed; 
+            display: flex;
+            font-size: 15;
+            top: 15px; 
+            right: 0;
+            width: auto; 
+            z-index: 1000; 
+            box-shadow: 0 2px 4px rgba(173, 167, 167, 0.1);
+            transition: none;
+        }
+        .navbar a {
+            color: #00bfff;
+            text-decoration: none;
+            margin: 0 25px;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 8px #00bfff; 
+        }
+        .nav-toggle-label {
+            display: contents; /* Initially hide the label */
+            position: fixed;
+            top: 0; right: 0;
+            padding: 1rem;
+        }
+        .nav-toggle-label span,
+        .nav-toggle-label span i {
+            display: none;
+        }
+        
+
+
+        h2 {
+            /* color: #00bfff; */
+            background: -webkit-linear-gradient(left, #007bff, #60d0f6);
+            background-clip: text;
+            color: transparent;
+            background-size: 200% 100%;
+            animation: moveGradient 2s linear infinite;
+            text-align: center; /* Center align the category titles */
+        }     
+        .contact-intro {
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            
+        }
+
+        .contact-icons a {
+            display: inline-block;
+            margin: 20px 150px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-icons a:hover {
+            transform: scale(1.5); /* Adjust the scale value to control the enlargement */
+        }
+
+
+
+
+    
+        @media (max-width: 1080px) {
+
+            .cool-looking-name {
+                font-size: 38px;
+            }
+
+
+            #about {
+                padding: 20px;
+            }
+
+            .about-content {
+                display: flex;
+                flex-direction: column; /* Stack the items on top of each other */
+                align-items: center; /* Align items horizontally for when flex-direction is column */
+            }
+
+            #about p {
+                max-width: 100%; /* Allow the text to take full width */
+                text-align: center; /* Center the text for small screens */
+                margin-bottom: 20px; /* Add space between the text and the image */
+            }
+
+            #about img {
+                width: 50%; /* Adjust the image size for small screens */
+                height: auto; /* Keep the aspect ratio */
+                margin: 0 auto; /* Center the image */
+            }
+
+          
+            .nav-toggle-label span,
+            .nav-toggle-label span i {
+                display: block; /* Make sure the icon is visible */
+                color: #0eb4e7; 
+                font-size: 1.5rem; 
+                right: 0;
+                z-index: 1000;
+            }
+
+
+            .navbar {
+                position: fixed;
+                display:block;
+                top: 0; right: 0;
+                width: 100%; /* Sidebar width */
+                height: 100%;
+                background: -webkit-linear-gradient(left, #007bff, #8811c5);
+                box-shadow: -5px 0 15px rgba(0,0,0,.5);
+                transform: translateX(100%);
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .nav-toggle:checked ~ .navbar {
+                transform: translateX(0); 
+            }
+
+            .navbar a {
+                display: flex;
+                padding: 30px 10px;
+                font-weight: bold;
+                text-align: center;
+                color:lightskyblue;
+            }
+            .nav-toggle:checked ~ .nav-toggle-label {
+                display: none;
+            }
+
+            .back-arrow {
+                display: none; /* Hide the back arrow by default */
+                color: #fff; 
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 1rem;
+            }
+            
+
+
+            .contact-icons a {
+                display: inline-block;
+                margin: 20px 50px;
+                transition: transform 0.3s ease;
+            }
+
+
+            #goals .goals-content {
+                flex-direction: column;
+            }
+            #goals .goals-text,
+            #goals .goals-media {
+                margin: 0;
+                max-width: 100%;
+            }
+            #goals .goals-media {
+                margin-top: 20px; /* Add some space between text and image/button */
+            }
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+
+
+        <div class="cool-looking-name">Yousef Habeeb</div>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span><i class="fas fa-bars"></i></span>
+        </label>
+
+        <div class="navbar">
+            <a href="#" class="back-arrow" style="display:none;">&#8678;
+            </a> 
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#goals">Goals</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+
+<main class="container">
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <p> I am eager to connect with innovative companies where I can apply my technical skills and collaborative spirit to real-world projects, further my learning, and contribute to a team that values creativity and cutting-edge technology. My goal is to immerse myself in a dynamic environment that not only challenges me but also allows me to grow and make significant contributions to the field of software development.</p>
+            <img src="https://source.unsplash.com/featured/?professional,portrait" alt="Yousef Habeeb">
+        </div>
+    </section>
+    
+
+    <section id="skills">
+        <h2>My Proficiency</h2>
+        <div class="grid">
+            <article>
+                <img src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png" alt="C++ Symbol" style="width:48px;height:auto;">
+                <h3>C++</h3>
+                <p>Proficient in using C++ for efficient algorithm design, data structures, and performance-critical software development. Experienced in developing complex software systems that require in-depth understanding of object-oriented programming and memory management.</p>
+            </article>
+            <article>
+                <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python Symbol" style="width:48px;height:auto;">
+                <h3>Python</h3>
+                <p>Skilled in Python for developing web applications, data analysis, and machine learning projects. Utilizes libraries such as pandas, NumPy, and Matplotlib for data manipulation and visualization, along with Django and Flask for web development.</p>
+            </article>
+            <article>
+                <img src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png" alt="Java Symbol" style="width:48px;height:auto;">
+                <h3>Java</h3>
+                <p>Experienced in Java for building cross-platform applications and Android development. Proficient in applying object-oriented design principles and patterns, creating robust and scalable applications with Spring Framework and JavaFX.</p>
+            </article>
+        </div>
+    </section>
+
+
+
+
+    <section id="goals">
+        <h2>My Goals</h2>
+        <div class="goals-content">
+            <div class="goals-text">
+                <p>As an aspiring software engineer, my path has been shaped by a blend of hands-on development, educational mentorship, and internships, each enriching my perspective on technology's transformative power. Working with WYA Group taught me the critical importance of user-centric design and agile methodologies in software development, emphasizing the need for adaptability and teamwork in creating impactful digital experiences. In parallel, my role as a TA Instructor at the University of Illinois Chicago highlighted the value of communication and empathy in technology education, reinforcing my belief in the power of knowledge-sharing to inspire innovation. My engagements in technology research, albeit brief, instilled in me a deeper understanding of technology's challenges and the perseverance required to address them. These experiences converge towards a singular goal: to leverage my diverse skills and insights to contribute to meaningful technology solutions that are both innovative and accessible, continuously pushing myself to grow within the ever-evolving landscape of software engineering.</p>
+            </div>
+            <div class="goals-media">
+                <h3 class="aspiring-title">Aspiring Software Engineer</h3> <!-- Title above the image -->
+                <img src="https://source.unsplash.com/featured/?professional" alt="Professional Image">
+                <a href="Yousef_resume.pdf" download="Yousef_Habeeb_Resume.pdf">
+                    <button type="button">My Resume</button>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+
+    <section id="projects">
+    <h2>My Work</h2>
+    <div class="grid">
+        <article>
+            <h3><a href="https://github.com/YousefHabeeb21/Search-engine-" target="_blank">Search-engine</a></h3>
+            <p>I've developed a program in C++ that simulates the functionality of a search engine, allowing users to locate pages containing specific words. With additional features such as a search history, the program operates using maps of strings and sets of strings. Sets store URLs, while strings handle user inputs, enhancing the search experience.</p>
+        </article>
+        <article>
+            <h3><a href="https://github.com/YousefHabeeb21/Wumpus" target="_blank">Hunt the Wumpus</a></h3>
+            <p>This program is my take on the classic game "Hunt the Wumpus." I've designed it to let players explore a cave system, face off against the Wumpus, and avoid dangers like bottomless pits and super-bats. Built using C, I've implemented dynamic memory allocation to handle the cave layout and player interactions, along with randomization for positioning the player, Wumpus, hazards, and arrows.</p>
+        </article>
+        <article>
+            <h3><a href="https://github.com/YousefHabeeb21/Wordle-guesses-" target="_blank">Multi-Client Chat</a></h3>
+            <p>I've created a JavaFX chat application for multiple clients and a central server. I implemented the client-server communication logic, handling message transmission and reception. Additionally, I created user interfaces for both the server and client sides, enabling users to send and receive messages seamlessly. Overall, I've crafted a functional and user-friendly chat application for real-time communication.</p>
+        </article>
+    </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-icons" style="text-align:center;">
+            <a href="#" onclick="openGmail()">
+                <i class="fas fa-envelope fa-3x"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/yousefhabeeb21/" target="_blank" class="contact-link">
+                <i class="fab fa-linkedin fa-3x"></i>
+            </a>
+            <a href="https://github.com/YousefHabeeb21" target="_blank" class="contact-link">
+                <i class="fab fa-github-square fa-3x"></i>
+            </a>
+        </div>
+    </section>
+    
+</main>
+
+
+
+
+
+
+<script>// contacts 
+    function openGmail() {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        if (/android/i.test(userAgent)) {
+            // Open Gmail app for Android
+            window.open("intent://compose?to=yousefmh21@gmail.com#Intent;scheme=mailto;package=com.google.android.gm;end");
+        } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            // Open Gmail app for iOS
+            window.open("googlegmail://co?to=yousefmh21@gmail.com");
+        } else {
+            // Open Gmail web for other devices
+            window.open("https://mail.google.com/mail/?view=cm&to=yousefmh21@gmail.com");
+        }
+    }
+</script>
+
+
+
+<script>
+    // smooth scroll
+    document.querySelectorAll('.navbar a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            let targetID = this.getAttribute('href');
+            let targetSection = document.querySelector(targetID);
+
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+</script>
+
+
+
+<script>//navigation 
+    document.addEventListener('DOMContentLoaded', function() {
+        const navToggle = document.getElementById('nav-toggle');
+        const navBar = document.querySelector('.navbar');
+        const backArrow = document.querySelector('.back-arrow'); // Get the back arrow
+
+        // Show the back arrow when the menu is opened
+        navToggle.addEventListener('change', function() {
+            if (navToggle.checked) {
+                backArrow.style.display = 'block';
+            } else {
+                backArrow.style.display = 'none';
+            }
+            navBar.style.transition = navToggle.checked ? 'transform 0.3s ease-in-out' : 'none';
+        });
+
+        // Close the navigation menu and hide the back arrow when a link is clicked
+        navBar.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                navToggle.checked = false;
+                backArrow.style.display = 'none'; // Hide the back arrow when any link is clicked
+            });
+        });
+
+        // Optional: Adjust for window resize as before
+        window.addEventListener('resize', function() {
+            navBar.style.transition = 'none';
+        });
+
+        // Close menu when the back arrow is clicked
+        backArrow.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default anchor behavior
+            navToggle.checked = false; // Uncheck the toggle
+            backArrow.style.display = 'none'; // Hide the back arrow
+        });
+    });
+
+ </script>
+    
+    
+
+</body>
+</html>
