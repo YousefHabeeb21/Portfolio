@@ -1,0 +1,316 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+.cool-looking-name {
+    margin-left: 25px;
+    font-family: 'Righteous', cursive;
+    font-size: 48px;
+    background: -webkit-linear-gradient(left, #007bff, #8811c5);
+    background-clip: text;
+    color: transparent;
+
+    background-size: 200% 100%;
+    animation: moveGradient 1.5s linear infinite;
+    display: inline-block;
+}
+
+@keyframes moveGradient {
+
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+
+
+
+
+
+#about {
+    text-align: center; 
+    padding: 30px;
+}
+
+#about h2 {
+    margin-top: 40px; 
+}
+
+.about-content {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 100px; 
+    margin-top: 125px;
+}
+
+#about p {
+    flex: 1; 
+    max-width: 50%;
+    text-align: center; 
+}
+
+#about img {
+    flex: 1; 
+    border-radius: 05%; 
+    width: 200px; 
+    height: auto;
+}
+
+
+
+#goals .goals-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px; /* Add padding for spacing */
+    margin-top: 125px;
+}
+
+#goals .goals-text {
+    margin-right: 100px; 
+    text-align: center;
+   
+}
+
+#goals .goals-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    
+}
+
+#goals .goals-media .aspiring-title {
+    margin-bottom: 15px; 
+    font-size: 20px; 
+    text-align: center;
+    color: #007bff; 
+}
+
+#goals .goals-media img {
+    max-width: 350px; /* Adjust based on your preference */
+    max-height: auto;
+    margin-bottom: 10px; /* Space between image and download button */
+}
+
+#goals a button {
+    padding: 10px 20px;
+    background: -webkit-linear-gradient(left, #007bff, #8811c5);
+    background-size: 200% 100%;
+    animation: moveGradient 2s linear infinite;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+#goals .goals-media a:hover {
+    text-decoration: none; 
+    transform: scale(1.05);
+}
+
+
+
+
+
+    #skills {
+        margin-top: 350px;
+    }
+    #goals {
+        margin-top: 350px;
+    }
+
+    #projects {
+        margin-top: 350px;
+    }
+
+    #contact {
+        padding-top: 100px;
+        margin-bottom: auto;
+    }
+
+
+
+
+    
+
+    article {
+        padding: 15px;
+        border-radius: 20px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        margin-bottom: 5px;
+    
+    }
+    article:hover {
+        transform: translateY(-5px); 
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+    }
+    
+
+
+    .navbar {
+        position: fixed; 
+        display: flex;
+        font-size: 15;
+        top: 15px; 
+        right: 0;
+        width: auto; 
+        z-index: 1000; 
+        box-shadow: 0 2px 4px rgba(173, 167, 167, 0.1);
+        transition: none;
+    }
+    .navbar a {
+        color: #00bfff;
+        text-decoration: none;
+        margin: 0 25px;
+        font-size: 18px;
+        transition: color 0.3s;
+    }
+    .navbar a:hover {
+        color: #ffffff;
+        text-shadow: 0 0 8px #00bfff; 
+    }
+    .nav-toggle-label {
+        display: contents; /* Initially hide the label */
+        position: fixed;
+        top: 0; right: 0;
+        padding: 1rem;
+    }
+    .nav-toggle-label span,
+    .nav-toggle-label span i {
+        display: none;
+    }
+    
+
+
+    h2 {
+        /* color: #00bfff; */
+        background: -webkit-linear-gradient(left, #0253aa, #94d9f0);
+        background-clip: text;
+        color: transparent;
+        background-size: 200% 100%;
+        animation: moveGradient 2s linear infinite;
+        text-align: center; /* Center align the category titles */
+        margin-top: 100px;
+    }     
+    .contact-intro {
+        text-align: center;
+        font-size: 1.2em;
+        font-weight: bold;
+        
+    }
+
+    .contact-icons a {
+        display: inline-block;
+        margin: 20px 150px;
+        transition: transform 0.3s ease;
+    }
+
+    .contact-icons a:hover {
+        transform: scale(1.5); /* Adjust the scale value to control the enlargement */
+    }
+
+
+
+
+
+    @media (max-width: 1080px) {
+
+        .cool-looking-name {
+            font-size: 38px;
+        }
+
+
+        #about {
+            padding: 50px;
+        }
+
+        .about-content {
+            display: flex;
+            flex-direction: column; /* Stack the items on top of each other */
+            align-items: center; /* Align items horizontally for when flex-direction is column */
+            margin-top: 30px;
+        }
+
+        #about p {
+            max-width: 100%; /* Allow the text to take full width */
+            text-align: center; /* Center the text for small screens */
+            margin-bottom: -20px; 
+        }
+
+        #about img {
+            width: 75%; /* Adjust the image size for small screens */
+            height: auto; /* Keep the aspect ratio */
+        }
+
+      
+        .nav-toggle-label span,
+        .nav-toggle-label span i {
+            display: block; /* Make sure the icon is visible */
+            color: #0eb4e7; 
+            font-size: 1.5rem; 
+            right: 0;
+            z-index: 1000;
+
+        }
+
+
+        .navbar {
+            position: fixed;
+            display:block;
+            top: 0; right: 0;
+            width: 100%; /* Sidebar width */
+            height: 100%;
+            background: -webkit-linear-gradient(left, #007bff, #8811c5);
+            box-shadow: -5px 0 15px rgba(0,0,0,.5);
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .nav-toggle:checked ~ .navbar {
+            transform: translateX(0); 
+        }
+
+        .navbar a {
+            display: flex;
+            padding: 30px 10px;
+            font-weight: bold;
+            text-align: center;
+            color:lightskyblue;
+        }
+        .nav-toggle:checked ~ .nav-toggle-label {
+            display: none;
+        }
+
+        .back-arrow {
+            display: none; /* Hide the back arrow by default */
+            color: #fff; 
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 1rem;
+        }
+        
+
+
+        .contact-icons a {
+            display: inline-block;
+            margin: 20px 50px;
+            transition: transform 0.3s ease;
+        }
+
+
+        #goals .goals-content {
+            flex-direction: column;
+            margin-top: 30px;
+        }
+        #goals .goals-text,
+        #goals .goals-media {
+            margin: 0;
+            max-width: 100%;
+        }
+        #goals .goals-media {
+            margin-top: 20px; /* Add some space between text and image/button */
+        }
+    }
