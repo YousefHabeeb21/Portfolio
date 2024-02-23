@@ -1,10 +1,5 @@
 
 
-body {
-    background-color: #071925;
-}
-
-
 
 
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
@@ -20,6 +15,12 @@ body {
     animation: moveGradient 1.5s linear infinite;
     display: inline-block;
 }
+
+body {
+    background-color: #071925;
+}
+
+
 
 @keyframes moveGradient {
 
