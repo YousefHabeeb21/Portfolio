@@ -1,7 +1,3 @@
-
-
-
-
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 .cool-looking-name {
     margin-left: 25px;
@@ -10,7 +6,6 @@
     background: -webkit-linear-gradient(left, #007bff, #8811c5);
     background-clip: text;
     color: transparent;
-
     background-size: 200% 100%;
     animation: moveGradient 1.5s linear infinite;
     display: inline-block;
@@ -98,6 +93,7 @@ body {
     max-width: 350px; /* Adjust based on your preference */
     max-height: auto;
     margin-bottom: 10px; /* Space between image and download button */
+    border-radius: 35px;
 }
 
 #goals a button {
