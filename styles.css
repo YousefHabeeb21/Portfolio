@@ -3,7 +3,7 @@
     margin-left: 25px;
     font-family: 'Righteous', cursive;
     font-size: 48px;
-    background: -webkit-linear-gradient(left, #007bff, #8811c5);
+    background: -webkit-linear-gradient(left, #4493e7, #8811c5);
     background-clip: text;
     color: transparent;
     background-size: 200% 100%;
@@ -293,16 +293,9 @@ article:hover {
         }
 
 
-        #goals .goals-content {
-            flex-direction: column;
-            margin-top: 30px;
-        }
-        #goals .goals-text,
-        #goals .goals-media {
-            margin: 0;
-            max-width: 100%;
-        }
-        #goals .goals-media {
-            margin-top: 20px; /* Add some space between text and image/button */
-        }
+        #goals {
+            scroll-margin-top: -100px; /* Adjust this value based on your fixed header's height */
+          }
+          
+
     }
