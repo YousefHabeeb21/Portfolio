@@ -29,6 +29,28 @@ body {
 
 
 
+
+
+#skills {
+    margin-top: 350px;
+}
+#goals {
+    margin-top: 350px;
+}
+
+#projects {
+    margin-top: 350px;
+}
+
+#contact {
+    padding-top: 100px;
+    margin-bottom: auto;
+}
+
+
+
+
+
 #about {
     text-align: center; 
     padding: 30px;
@@ -61,94 +83,59 @@ body {
 
 
 
-#goals .goals-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px; /* Add padding for spacing */
-    margin-top: 125px;
-}
 
-#goals .goals-text {
-    margin-right: 100px; 
+
+.goals-content {
     text-align: center;
-   
+    padding: 15px;
 }
 
-#goals .goals-media {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    
+.experience-icon {
+    width: 80px; /* Adjust as necessary */
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 30%;
 }
-
-#goals .goals-media .aspiring-title {
-    margin-bottom: 15px; 
-    font-size: 20px; 
+/* Container for the download button to center it */
+.download-button-container {
     text-align: center;
-    color: #007bff; 
+    margin-top: 40px; /* Adjust as needed for spacing */
 }
 
-#goals .goals-media img {
-    max-width: 350px; /* Adjust based on your preference */
-    max-height: auto;
-    margin-bottom: 10px; /* Space between image and download button */
-    border-radius: 35px;
-}
-
-#goals a button {
+/* Style for the download resume button */
+.resume-button {
     padding: 10px 20px;
     background: -webkit-linear-gradient(left, #007bff, #8811c5);
     background-size: 200% 100%;
     animation: moveGradient 2s linear infinite;
+    color: white;
     border: none;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 20px;
+    display: inline-block; 
 }
 
-#goals .goals-media a:hover {
+/* Hover effect to match the cards */
+#goals .resume-button:hover {
     text-decoration: none; 
     transform: scale(1.05);
 }
 
 
 
+article {
+    padding: 15px;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    margin-bottom: 5px;
+    background-color: #082030;
 
-
-    #skills {
-        margin-top: 350px;
-    }
-    #goals {
-        margin-top: 350px;
-    }
-
-    #projects {
-        margin-top: 350px;
-    }
-
-    #contact {
-        padding-top: 100px;
-        margin-bottom: auto;
-    }
-
-
-
-
-    
-
-    article {
-        padding: 15px;
-        border-radius: 20px;
-        text-align: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease; 
-        margin-bottom: 5px;
-        background-color: #082030;
-    
-    }
-    article:hover {
-        transform: translateY(-5px); 
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
-    }
+}
+article:hover {
+    transform: translateY(-25px); 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+}
     
 
 
@@ -208,6 +195,8 @@ body {
         display: inline-block;
         margin: 20px 150px;
         transition: transform 0.3s ease;
+        /* display:contents; */
+        /* align-items: center;  */
     }
 
     .contact-icons a:hover {
