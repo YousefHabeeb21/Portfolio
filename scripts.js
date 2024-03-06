@@ -19,7 +19,7 @@
 
 
 
-    // smooth scroll
+    //smooth scroll
     document.querySelectorAll('.navbar a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -47,6 +47,8 @@
             }
         });
     });
+
+   
     
 
 
