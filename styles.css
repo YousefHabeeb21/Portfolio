@@ -94,7 +94,7 @@ body {
     border-radius: 30%;
 }
 /* Container for the download button to center it */
-.download-button-container {
+.button-container {
     text-align: center;
     margin-top: 40px; /* Adjust as needed for spacing */
 }
@@ -105,6 +105,7 @@ body {
     background: -webkit-linear-gradient(left, #007bff, #8811c5);
     background-size: 200% 100%;
     animation: moveGradient 2s linear infinite;
+    text-decoration: none;
     color: white;
     border: none;
     border-radius: 10px;
