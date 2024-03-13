@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+.cool-looking-name {
+    margin-left: 25px;
+    font-family: 'Righteous', cursive;
+    font-size: 48px;
+    background: -webkit-linear-gradient(left, #4493e7, #8811c5);
+    background-clip: text;
+    color: transparent;
+    background-size: 200% 100%;
+    animation: moveGradient 1.5s linear infinite;
+    display: inline-block;
+}
+
+body {
+    background-color: #071925;
+}
+
+
+
+@keyframes moveGradient {
+
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+
+
+.navbar {
+    position: fixed; 
+    display: flex;
+    font-size: 15;
+    top: 15px; 
+    right: 0;
+    width: auto; 
+    z-index: 1000; 
+    box-shadow: 0 2px 4px rgba(173, 167, 167, 0.1);
+    transition: none;
+}
+.navbar a {
+    color: #00bfff;
+    text-decoration: none;
+    margin: 0 25px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+.navbar a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px #00bfff; 
+}
+.nav-toggle-label {
+    display: contents; /* Initially hide the label */
+    position: fixed;
+    top: 0; right: 0;
+    padding: 1rem;
+}
+.nav-toggle-label span,
+.nav-toggle-label span i {
+    display: none;
+}
+
+
+.back-to-main {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-top: 100px;
+    font-size: 24px;
+    text-decoration: none;
+    color: #1f68b5;
+}
+
+.back-to-main:hover {
+    color: #007bff; /* Color changes on hover */
+}
+
+.back-to-main:hover .arrow-icon {
+    border-color: #007bff; /* Border color changes on hover */
+}
+
+.arrow-icon {
+    border: solid #1f68b5;
+    border-width: 0 5px 5px 0; /*arrow shape*/
+    display: inline-block;
+    padding: 10px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    transition: border-color 0.3s ease; /* Transition for smooth border color change */
+}
+
+.arrow-text {
+    padding-left: 15px;
+}
