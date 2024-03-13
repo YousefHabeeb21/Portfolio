@@ -205,7 +205,7 @@ article:hover {
 
 
 
-    @media (max-width: 1080px) {
+    @media (max-width: 990px) {
 
         .cool-looking-name {
             font-size: 38px;
@@ -234,6 +234,11 @@ article:hover {
             height: auto; /* Keep the aspect ratio */
         }
 
+
+        article:hover {
+            transform: translateY(0px); 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+        }
       
         .nav-toggle-label span,
         .nav-toggle-label span i {
