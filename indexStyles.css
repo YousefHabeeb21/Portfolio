@@ -40,11 +40,20 @@ body {
 
 #projects {
     margin-top: 350px;
+    
 }
 
 #contact {
     padding-top: 100px;
     margin-bottom: auto;
+}
+
+h3 {
+    font-family: 'Roboto', cursive;
+}
+h3 a:hover{
+    text-decoration: none;
+    transform: translateY(-15px); 
 }
 
 
@@ -72,6 +81,7 @@ body {
     flex: 1; 
     max-width: 50%;
     text-align: center; 
+    font-family: 'Roboto',cursive;
 }
 
 #about img {
@@ -128,10 +138,11 @@ article {
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
     margin-bottom: 5px;
     background-color: #082030;
+    font-family: 'Roboto',cursive;
 
 }
 article:hover {
-    transform: translateY(-15px); 
+    transform: translateY(-5px); 
     box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
 }
     
@@ -141,6 +152,7 @@ article:hover {
         position: fixed; 
         display: flex;
         font-size: 15;
+        font-family: 'Righteous';
         top: 15px; 
         right: 0;
         width: auto; 
@@ -180,6 +192,7 @@ article:hover {
         background-size: 200% 100%;
         animation: moveGradient 2s linear infinite;
         text-align: center; /* Center align the category titles */
+        font-family: 'Righteous', cursive;
         margin-top: 100px;
     }     
     .contact-intro {
@@ -227,6 +240,7 @@ article:hover {
             max-width: 100%; /* Allow the text to take full width */
             text-align: center; /* Center the text for small screens */
             margin-bottom: -20px; 
+            
         }
 
         #about img {
