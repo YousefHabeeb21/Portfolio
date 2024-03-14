@@ -8,13 +8,15 @@
     color: transparent;
     background-size: 200% 100%;
     animation: moveGradient 1.5s linear infinite;
-    display: inline-block;
+    display: flex;
 }
+
 
 body {
     background-color: #071925;
+    font-family: 'Righteous', cursive;
+    min-height: 100vh;
 }
-
 
 
 @keyframes moveGradient {
@@ -52,7 +54,7 @@ body {
     text-shadow: 0 0 8px #00bfff; 
 }
 .nav-toggle-label {
-    display: contents; /* Initially hide the label */
+    display: contents; 
     position: fixed;
     top: 0; right: 0;
     padding: 1rem;
@@ -64,21 +66,24 @@ body {
 
 
 .back-to-main {
-    display: flex;
-    align-items: center;
-    justify-content: left;
+    position: relative;
+    display: inline-block;
     margin-top: 100px;
+    margin-left: 30px;
     font-size: 24px;
     text-decoration: none;
     color: #1f68b5;
+    margin-bottom: 50px;
+    cursor: pointer;
 }
 
+
 .back-to-main:hover {
-    color: #007bff; /* Color changes on hover */
+    color: #007bff;
 }
 
 .back-to-main:hover .arrow-icon {
-    border-color: #007bff; /* Border color changes on hover */
+    border-color: #007bff;
 }
 
 .arrow-icon {
@@ -87,10 +92,60 @@ body {
     display: inline-block;
     padding: 10px;
     transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
-    transition: border-color 0.3s ease; /* Transition for smooth border color change */
+    transition: border-color 0.1s ease; 
 }
 
 .arrow-text {
     padding-left: 15px;
+}
+
+
+
+
+
+
+.carousel-container {
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center; 
+}
+
+.carousel-slide {
+    display: none; 
+    transition: opacity 0.5s ease-in-out;
+    height: auto; 
+    overflow: hidden; 
+    position: relative;
+}
+
+
+.carousel-slide.active {
+    display: block; /* Only show the active slide */
+    opacity: 1;
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 20px; /* Add space between buttons */
+    margin-top: 10px; /* Space from the image to the buttons */
+}
+
+.carousel-button {
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    padding: 10px 20px;
+    background-color: #00bfff;
+    color: white;
+    border: none;
+    border-radius: 15px;
+}
+
+.carousel-button:hover {
+    background-color: #007bff;
 }
