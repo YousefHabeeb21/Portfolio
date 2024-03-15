@@ -138,7 +138,7 @@ article {
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
     margin-bottom: 5px;
     background-color: #082030;
-    font-family: 'Roboto',cursive;
+    font-family: 'Roboto', cursive;
 
 }
 article:hover {
@@ -192,7 +192,7 @@ article:hover {
         background-size: 200% 100%;
         animation: moveGradient 2s linear infinite;
         text-align: center; /* Center align the category titles */
-        font-family: 'Righteous', cursive;
+        font-family: 'Righteous';
         margin-top: 100px;
     }     
     .contact-intro {
@@ -219,7 +219,7 @@ article:hover {
 
 
     @media (max-width: 990px) {
-
+        @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
         .cool-looking-name {
             font-size: 38px;
         }
