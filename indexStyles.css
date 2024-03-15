@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 
 
 .cool-looking-name {
@@ -16,6 +17,11 @@
 
 body {
     background-color: #071925;
+}
+body {
+    -webkit-font-smoothing: antialiased; /* for Chrome, Safari */
+    -moz-osx-font-smoothing: grayscale; /* for Firefox */
+    text-rendering: optimizeLegibility;
 }
 
 
@@ -52,7 +58,8 @@ body {
 }
 
 h3 {
-    font-family: 'Roboto', cursive;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+
 }
 h3 a:hover{
     text-decoration: none;
@@ -84,7 +91,8 @@ h3 a:hover{
     flex: 1; 
     max-width: 50%;
     text-align: center; 
-    font-family: 'Roboto',cursive;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+
 }
 
 #about img {
@@ -141,7 +149,8 @@ article {
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
     margin-bottom: 5px;
     background-color: #082030;
-    font-family: 'Roboto', cursive;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+
     
 
 }
