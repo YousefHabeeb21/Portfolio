@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=roboto&display=swap');
 
 
 .cool-looking-name {
@@ -15,7 +16,6 @@
 
 body {
     background-color: #071925;
-    font-family: 'roboto', cursive;
 }
 
 
@@ -196,7 +196,7 @@ article:hover {
         background-size: 200% 100%;
         animation: moveGradient 2s linear infinite;
         text-align: center; /* Center align the category titles */
-        font-family: 'Righteous',cursive;
+        font-family: 'Righteous';
         margin-top: 100px;
     }     
     .contact-intro {
