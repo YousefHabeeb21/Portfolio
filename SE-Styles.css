@@ -30,6 +30,30 @@ body {
 }
 
 
+@keyframes slideInRightFadeIn {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutLeftFadeOut {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+
+
 
 .navbar {
     position: fixed; 
@@ -114,17 +138,20 @@ body {
 }
 
 .carousel-slide {
-    display: none; 
-    transition: opacity 0.5s ease-in-out;
-    height: auto; 
-    overflow: hidden; 
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0; /* Start all slides as invisible */
+    visibility: hidden; /* Keep slides hidden */
+    transition: visibility 0s, opacity 0.5s linear; /* Apply transition for opacity */
 }
 
-
 .carousel-slide.active {
-    display: block; /* Only show the active slide */
     opacity: 1;
+    visibility: visible; /* Only the active slide is visible */
+    animation: fadeIn 0.5s ease-out; /* Apply the fadeIn animation */
+    position: relative;
 }
 
 .carousel-controls {
