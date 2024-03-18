@@ -29,28 +29,28 @@ body {
     }
 }
 
+@keyframes slideOutLeftFadeOut {
+    0% {
+        transform: translateX(0) translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-100%) translateY(0);
+        opacity: 0;
+    }
+}
 
 @keyframes slideInRightFadeIn {
     0% {
-        transform: translateX(100%);
+        transform: translateX(100%) translateY(0);
         opacity: 0;
     }
     100% {
-        transform: translateX(0);
+        transform: translateX(0) translateY(0);
         opacity: 1;
     }
 }
 
-@keyframes slideOutLeftFadeOut {
-    0% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-    100% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-}
 
 
 
@@ -91,6 +91,7 @@ body {
 
 .back-to-main {
     position: relative;
+    
     display: inline-block;
     margin-top: 100px;
     margin-left: 30px;
@@ -139,20 +140,52 @@ body {
 
 .carousel-slide {
     position: absolute;
-    top: 0;
-    left: 0;
+    align-items: center; /* Center items vertically */
+    justify-content: center; 
     width: 100%;
-    opacity: 0; /* Start all slides as invisible */
+    top:0;
+    opacity: 0; 
+    z-index: 1; 
     visibility: hidden; /* Keep slides hidden */
-    transition: visibility 0s, opacity 0.5s linear; /* Apply transition for opacity */
+
+
 }
 
 .carousel-slide.active {
-    opacity: 1;
-    visibility: visible; /* Only the active slide is visible */
-    animation: fadeIn 0.5s ease-out; /* Apply the fadeIn animation */
+    visibility: visible; 
     position: relative;
 }
+
+.description-flyout {
+    position: absolute;
+    top: 13%;
+    right: 30%;
+    transform-origin: center;    
+    transition: transform 1.5s ease, opacity 4s ease;
+    background: #fff; /* Ensure readability */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    width: 60%;
+    opacity: 0; 
+    pointer-events: none; 
+    padding: 5px; 
+    z-index: 10;
+}
+
+.description-visible {
+    width: auto;
+    opacity: 1;
+    pointer-events: auto; /* Enable mouse events when visible */
+    box-shadow: 10px 0px 6px rgba(0, 0, 0, 0.5);
+
+}
+
+.carousel-slide img {
+    box-shadow: 10px 0px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease, width 0.5s ease; 
+    width: auto; 
+}
+
 
 .carousel-controls {
     display: flex;
@@ -166,13 +199,35 @@ body {
     align-items: center;
     justify-content: center;
     width: auto;
+    margin-top: 30px;
     padding: 10px 20px;
     background-color: #00bfff;
     color: white;
     border: none;
     border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 .carousel-button:hover {
     background-color: #007bff;
 }
+
+
+
+
+.info-button {
+    display: inline-block;
+    margin-top: 50px; /* Adjust as needed */
+    border: none;
+    width: 15%;
+    height: 15%;
+    border-radius: 35%;
+    background-color: #007BFF; /* Example blue color */
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+
+

@@ -96,12 +96,12 @@ h3 a:hover{
 }
 
 #about img {
-    flex: 1; 
+    flex: .5; 
     border-radius: 05%; 
     width: 200px; 
     height: auto;
+    box-shadow: 10px 0px 6px rgba(0, 0, 0, 0.5);
 }
-
 
 
 
@@ -246,6 +246,7 @@ article:hover {
             flex-direction: column; /* Stack the items on top of each other */
             align-items: center; /* Align items horizontally for when flex-direction is column */
             margin-top: 30px;
+            
         }
 
         #about p {
@@ -258,6 +259,7 @@ article:hover {
         #about img {
             width: 75%; /* Adjust the image size for small screens */
             height: auto; /* Keep the aspect ratio */
+            box-shadow: 0 5px 8px rgba(0,0,0,0.4); 
         }
 
 
