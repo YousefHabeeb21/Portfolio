@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
 
-    <link rel="stylesheet" href="SE-Styles.css">
+    <link rel="stylesheet" href="project-Styles.css">
 </head>
 
 <body>
@@ -28,7 +28,7 @@
         <a href="#results">Results</a>
     </div>
 
-    <!-- Arrow link to go back to the main HTML file -->
+
     <a href="index.html" class="back-to-main">
         <div class="arrow-icon"></div>
         <span class="arrow-text">Back to main</span>
@@ -44,11 +44,11 @@
         </div>
         <div class="carousel-slide" id="slide2">
             <img src="Assets/Query-SE.png" alt="Code Image 2" class="carousel-image">
-            <button class="info-button" data-description="In this part, i showcase the search engine's ability to handle complex search queries. You don't need to know how to code to appreciate the convenience of being able to search for something with specific requirements. For example, if you're searching for websites that must include 'programming' and 'tutorials,' but not 'beginner,' this function makes that happen. It smartly includes what you want and excludes what you don't, sifting through the index to pull up the most relevant results. It's the behind-the-scenes magic that provides you with exactly what you're looking for with just a few keystrokes.">ℹ️</button>
+            <button class="info-button" data-description="This part of the code is meant to showcase the search engine's ability to handle complex search queries. You don't need to know how to code to appreciate the convenience of being able to search for something with specific requirements. For example, if you're searching for websites that must include 'programming' and 'tutorials,' but not 'beginner,' this function makes that happen. It smartly includes what you want and excludes what you don't, sifting through the index to pull up the most relevant results. It's the behind-the-scenes magic that provides you with exactly what you're looking for with just a few keystrokes.">ℹ️</button>
         </div>
         <div class="carousel-slide" id="slide3">
             <img src="Assets/SE-run.png" alt="Code Image 3" class="carousel-image">
-            <button class="info-button" data-description="Finally, you can see the search engine come to life. This interface is where you, the user, interact with the program. You simply type in what you're looking for, and the engine uses the index it built earlier to display a list of matching websites. Even if you've never written a line of code, the output is straightforward—telling you how many web pages it found that match your search terms. It's quick, efficient, and designed to be easily understood, so you can get to the information you need without hassle.
+            <button class="info-button" data-description="Finally, you can see the search engine come to life. This interface is where you, the user, interact with the program. You simply type in what you're looking for, and the engine uses the index it built earlier to display a list of matching websites. The output is straightforward—telling you how many web pages it found that match your search terms. It's quick, efficient, and designed to be easily understood, so you can get to the information you need without hassle.
 
             ">ℹ️</button>
         </div>
@@ -60,136 +60,7 @@
     </div>
 
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const slides = document.querySelectorAll('.carousel-slide');
-    slides[0].classList.add('active');
-    let currentSlideIndex = 0;
-  
-    const buttons = document.querySelectorAll('.carousel-button');
-
-    function changeSlide(newIndex) {
-    slides.forEach(slide => {
-        const img = slide.querySelector('img');
-        const description = slide.querySelector('.description-flyout');
-        if (img) {
-            img.classList.remove('image-shrink');
-            img.style.transform = '';
-        }
-        if (description) {
-            description.classList.remove('description-visible');
-            description.style.transform = 'translateX(100%)';
-            description.style.visibility = 'hidden';
-            description.style.opacity = '0';
-        }
-    });
-    if (currentSlideIndex !== newIndex) {
-        buttons.forEach(button => button.style.visibility = 'hidden'); // Hide buttons during the transition
-
-        const currentSlide = slides[currentSlideIndex];
-        const newSlide = slides[newIndex];
-
-        // Outgoing animation for current slide
-        currentSlide.style.animation = 'slideOutLeftFadeOut .5s forwards';
-
-        // Position the new slide off-screen to the right before it slides in
-        newSlide.style.transform = 'translateX(100%)'; // Start off-screen to the right
-        newSlide.style.visibility = 'visible';
-        newSlide.style.opacity = '1';
-
-        setTimeout(() => {
-            // Incoming animation for new slide
-            newSlide.style.animation = 'slideInRightFadeIn 1s forwards';
-            newSlide.style.transform = 'translateX(0%)'; // Slide in to center from the right
-        }, 100);
-
-        setTimeout(() => {
-            currentSlide.classList.remove('active');
-            currentSlide.style.visibility = 'hidden';
-            currentSlide.style.opacity = '0';
-            currentSlide.style.animation = '';
-            newSlide.classList.add('active');
-            currentSlideIndex = newIndex;
-
-            buttons.forEach(button => button.style.visibility = 'visible');
-            newSlide.scrollIntoView({behavior: 'smooth', block: 'center'});
-        }, 500);
-    }
-}
-
-
-    // Navigation button handlers
-    document.querySelector('[data-direction="prev"]').addEventListener('click', () => changeSlide((currentSlideIndex - 1 + slides.length) % slides.length));
-    document.querySelector('[data-direction="next"]').addEventListener('click', () => changeSlide((currentSlideIndex + 1) % slides.length));
-
-    // Initialize
-    slides[0].classList.add('active');
-    slides[0].style.visibility = 'visible';
-    slides[0].style.opacity = '1';
-});
-
-
-    </script>
-
-
-<script>
-
-function toggleDescription(event) {
-    const infoButton = event.currentTarget;
-    const slide = infoButton.closest('.carousel-slide');
-    const img = slide.querySelector('img');
-    const descriptionText = infoButton.getAttribute('data-description');
-
-    // Toggle the image class
-    img.classList.toggle('image-shrink');
-
-    // Handle the description element
-    let description = slide.querySelector('.description-flyout');
-    if (!description) {
-        // Create the description element if it doesn't exist
-        description = document.createElement('div');
-        description.className = 'description-flyout';
-        description.textContent = descriptionText; // Set text immediately
-        slide.appendChild(description);
-        // Force reflow/repaint to ensure the transition is applied
-        void description.offsetHeight;
-    }
-
-    // Apply initial visibility and opacity if it's the first time
-    if (!description.style.visibility || description.style.visibility === 'hidden') {
-        description.style.visibility = 'visible';
-        description.style.opacity = '0';
-    }
-
-    // Now toggle visibility and opacity
-    if (description.classList.contains('description-visible')) {
-        description.style.opacity = '0';
-        setTimeout(() => {
-            description.style.visibility = 'hidden';
-        }, 500); // Match your transition time
-    } else {
-        description.style.visibility = 'visible';
-        description.style.opacity = '1';
-    }
-    description.classList.toggle('description-visible');
-
-    // Adjust the image and description positioning
-    if (img.classList.contains('image-shrink')) {
-        img.style.transform = 'scale(0.85) translateX(-50%)';
-        description.style.transform = 'translateX(100%)'; // Adjust as needed
-    } else {
-        img.style.transform = '';
-        description.style.transform = 'translateX(0)';
-    }
-
-}
-
-document.querySelectorAll('.info-button').forEach(button => {
-    button.addEventListener('click', toggleDescription);
-});
-
-  </script>
-
+    <script src="project_scripts.js"></script>
 
 
 </body>
