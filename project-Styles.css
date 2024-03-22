@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
 .cool-looking-name {
     margin-left: 25px;
     font-family: 'Righteous', cursive;
@@ -14,7 +16,7 @@
 
 body {
     background-color: #071925;
-    font-family: 'Righteous';
+    font-family: 'Fredoka One';
     min-height: 100vh;
 }
 
@@ -91,7 +93,6 @@ body {
 
 .back-to-main {
     position: relative;
-    
     display: inline-block;
     margin-top: 100px;
     margin-left: 30px;
@@ -147,8 +148,6 @@ body {
     opacity: 0; 
     z-index: 1; 
     visibility: hidden; 
-
-
 }
 
 .carousel-slide.active {
@@ -233,3 +232,142 @@ body {
     background-color: #388ff1;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+#infoModal {
+    display: none; 
+    position: fixed; 
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0,0,0,0.4); 
+    align-items: center;
+    display: flex;
+}
+
+
+.modal-content {
+    background-color: #4a72df;
+    margin: auto; 
+    padding: 20px;
+    width: 80%; 
+    max-width: 500px; 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 10px; 
+}
+
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    top: -5px;
+    right: 15px;
+    position: fixed;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+@keyframes modalFlyIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes modalFlyOut {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    .modal-content {
+        width: 90%;
+    }
+
+    .cool-looking-name {
+        font-size: 38px;
+    }
+
+
+    .nav-toggle-label span,
+        .nav-toggle-label span i {
+            display: block; 
+            color: #0eb4e7; 
+            font-size: 1.5rem; 
+            right: 0;
+            z-index: 1000;
+
+        }
+
+
+        .navbar {
+            position: fixed;
+            display:block;
+            top: 0; right: 0;
+            width: 100%;
+            height: 100%;
+            background: -webkit-linear-gradient(left, #007bff, #8811c5);
+            box-shadow: -5px 0 15px rgba(0,0,0,.5);
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .nav-toggle:checked ~ .navbar {
+            transform: translateX(0); 
+        }
+
+        .navbar a {
+            display: flex;
+            padding: 30px 10px;
+            font-weight: bold;
+            text-align: center;
+            color:lightskyblue;
+        }
+        .nav-toggle:checked ~ .nav-toggle-label {
+            display: none;
+        }
+
+        .back-arrow {
+            display: none; 
+            color: #fff; 
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 1rem;
+            
+        }
+        
+}

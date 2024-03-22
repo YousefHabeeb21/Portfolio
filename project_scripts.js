@@ -1,5 +1,24 @@
 
-// slides 
+//when getting a new slide 
+function resetSlideElements(slide) {
+    const img = slide.querySelector('img');
+    const description = slide.querySelector('.description-flyout');
+    if (img) {
+        img.classList.remove('image-shrink');
+        img.style.transform = '';
+    }
+    if (description) {
+        description.classList.remove('description-visible');
+        description.style.visibility = 'hidden';
+        description.style.opacity = '0';
+        description.style.transform = 'translateX(0%)'; 
+    }
+}
+
+
+
+
+// diplay slides 
 document.addEventListener('DOMContentLoaded', function() {
     const slides = document.querySelectorAll('.carousel-slide');
     slides[0].classList.add('active');
@@ -8,20 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('.carousel-button');
 
     function changeSlide(newIndex) {
-    slides.forEach(slide => {
-        const img = slide.querySelector('img');
-        const description = slide.querySelector('.description-flyout');
-        if (img) {
-            img.classList.remove('image-shrink');
-            img.style.transform = '';
-        }
-        if (description) {
-            description.classList.remove('description-visible');
-            description.style.transform = 'translateX(100%)';
-            description.style.visibility = 'hidden';
-            description.style.opacity = '0';
-        }
-    });
+        slides.forEach(slide => resetSlideElements(slide));
+
+
     if (currentSlideIndex !== newIndex) {
         buttons.forEach(button => button.style.visibility = 'hidden'); 
 
@@ -102,7 +110,7 @@ function toggleDescription(event) {
         description.style.opacity = '0';
         setTimeout(() => {
             description.style.visibility = 'hidden';
-        }, 500); 
+        }, 50); 
     } else {
         description.style.visibility = 'visible';
         description.style.opacity = '1';
@@ -125,8 +133,99 @@ function toggleDescription(event) {
     }
 }
 
+
+
+
+
+
+
+
+// choosing modal view or descritpion toggel based on screen size
 document.querySelectorAll('.info-button').forEach(button => {
-    button.addEventListener('click', toggleDescription);
+    button.addEventListener('click', function(event) {
+
+        if (window.innerWidth >= 1000) {
+            toggleDescription(event);
+        } 
+        else {
+            const descriptionText = event.currentTarget.getAttribute('data-description');
+            showModal(descriptionText);
+        }
+    });
 });
+// pop out the modal
+function showModal(descriptionText) {
+    const modal = document.getElementById('infoModal');
+    const modalDescription = document.getElementById('modalDescription');
+    modalDescription.textContent = descriptionText;
+
+    modal.style.display = "inline-flex";
+    const modalContent = modal.querySelector('.modal-content');
+    modalContent.style.opacity = "1";
+    modalContent.style.transform = "scale(1)";
+    modalContent.style.animation = "modalFlyIn 0.5s";
+
+    modalContent.addEventListener('animationend', function() {
+        modalContent.style.opacity = "1"; 
+        modalContent.style.transform = "scale(1)"; 
+    }, { once: true });
+
+    modal.onclick = function(event) {
+        if (event.target === modal) {
+            hideModal();
+        }
+    };
+
+    document.querySelector('.modal-content').onclick = function(event) {
+        event.stopPropagation(); 
+    };
+}
+
+// make the modal dissapear
+function hideModal() {
+    const modal = document.getElementById('infoModal');
+    const modalContent = modal.querySelector('.modal-content');
+    modalContent.style.animation = "modalFlyOut 0.5s";
+    modalContent.addEventListener('animationend', () => {
+        modal.style.display = "none";
+    }, { once: true }); 
+}
+
+const closeSpan = document.querySelector('.close');
+closeSpan.onclick = function() {
+    hideModal();
+};
+
+
+
+
+
+
+
+
+
+
+
+/// dynamic changes for descruiptions based on screen size
+window.addEventListener('resize', function() {
+   
+    const currentWidth = window.innerWidth;
+    if (currentWidth < 1000) {
+    
+        closeAllDescriptions();
+        
+    } else {
+       
+        if (document.getElementById('infoModal').style.display !== 'none') {
+            hideModal(); 
+        }
+       
+    }
+});
+// closing the descriptions 
+function closeAllDescriptions() {
+    document.querySelectorAll('.carousel-slide').forEach(slide => resetSlideElements(slide));
+}
+
 
 

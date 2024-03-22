@@ -4,8 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
 
@@ -23,9 +21,8 @@
     <div class="navbar">
         <a href="#" class="back-arrow" style="display:none;">&#8678;
         </a>
-        <a href="#build">Build</a>
-        <a href="#query">Query</a>
-        <a href="#results">Results</a>
+        <a href="wumpus.html">Wumpus</a>
+        <a href="#client">Client-server</a>
     </div>
 
 
@@ -48,9 +45,7 @@
         </div>
         <div class="carousel-slide" id="slide3">
             <img src="Assets/SE-run.png" alt="Code Image 3" class="carousel-image">
-            <button class="info-button" data-description="Finally, you can see the search engine come to life. This interface is where you, the user, interact with the program. You simply type in what you're looking for, and the engine uses the index it built earlier to display a list of matching websites. The output is straightforward—telling you how many web pages it found that match your search terms. It's quick, efficient, and designed to be easily understood, so you can get to the information you need without hassle.
-
-            ">ℹ️</button>
+            <button class="info-button" data-description="Finally, you can see the search engine come to life. This interface is where you, the user, interact with the program. You simply type in what you're looking for, and the engine uses the index it built earlier to display a list of matching websites. The output is straightforward—telling you how many web pages it found that match your search terms. It's quick, efficient, and designed to be easily understood, so you can get to the information you need without hassle.">ℹ️</button>
         </div>
     
         <div class="carousel-controls">
@@ -59,8 +54,16 @@
         </div>
     </div>
 
+    <div id="infoModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modalDescription">testing</p>
+        </div>
+    </div>
+
 
     <script src="project_scripts.js"></script>
+    <script src="navbar.js"></script>
 
 
 </body>
