@@ -160,7 +160,7 @@ body {
     top: 13%;
     right: 30%;
     transform-origin: center;    
-    transition: transform 1.5s ease, opacity .5s ease;
+    transition: transform 1.5s ease, ease-out 1s;
     background: transparent; 
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);

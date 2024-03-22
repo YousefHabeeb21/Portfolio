@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+
+    <link rel="stylesheet" href="project-Styles.css">
+</head>
+
+<body>
+    <div class="cool-looking-name">Yousef Habeeb</div>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden>
+    <label for="nav-toggle" class="nav-toggle-label">
+        <span><i class="fas fa-bars"></i></span>
+    </label>
+
+    <div class="navbar">
+        <a href="#" class="back-arrow" style="display:none;">&#8678;
+        </a>
+        <a href="#client">Search-engine</a>
+        <a href="wumpus.html">Wumpus</a>
+    </div>
+
+
+    <a href="index.html" class="back-to-main">
+        <div class="arrow-icon"></div>
+        <span class="arrow-text">Back to main</span>
+    </a>
+
+
+
+
+    <div class="carousel-container">
+        <div class="carousel-slide" id="slide1">
+            <img src="Assets/Build-SE.png" alt="Code Image 1" class="carousel-image">
+            <button class="info-button" data-description="Here, you can see a glimpse of how my search engine begins to understand data. This piece of code is the engine's first step—building an index. Much like a librarian organizing books to make finding them easier, my program reads through a file containing URLs and their descriptions, categorizing each word after stripping away any punctuation and converting them to a uniform lowercase. These words are then linked to their respective URLs in a system designed for quick retrieval later on. It's like creating a roadmap for the program to follow when it needs to find information quickly.">ℹ️</button>
+        </div>
+        <div class="carousel-slide" id="slide2">
+            <img src="Assets/Query-SE.png" alt="Code Image 2" class="carousel-image">
+            <button class="info-button" data-description="This part of the code is meant to showcase the search engine's ability to handle complex search queries. You don't need to know how to code to appreciate the convenience of being able to search for something with specific requirements. For example, if you're searching for websites that must include 'programming' and 'tutorials,' but not 'beginner,' this function makes that happen. It smartly includes what you want and excludes what you don't, sifting through the index to pull up the most relevant results. It's the behind-the-scenes magic that provides you with exactly what you're looking for with just a few keystrokes.">ℹ️</button>
+        </div>
+        <div class="carousel-slide" id="slide3">
+            <img src="Assets/SE-run.png" alt="Code Image 3" class="carousel-image">
+            <button class="info-button" data-description="Finally, you can see the search engine come to life. This interface is where you, the user, interact with the program. You simply type in what you're looking for, and the engine uses the index it built earlier to display a list of matching websites. The output is straightforward—telling you how many web pages it found that match your search terms. It's quick, efficient, and designed to be easily understood, so you can get to the information you need without hassle.">ℹ️</button>
+        </div>
+    
+        <div class="carousel-controls">
+            <button class="carousel-button" data-direction="prev">&#10094;</button>
+            <button class="carousel-button" data-direction="next">&#10095;</button>
+        </div>
+    </div>
+
+    <div id="infoModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modalDescription">testing</p>
+        </div>
+    </div>
+
+
+    <script src="project_scripts.js"></script>
+    <script src="navbar.js"></script>
+
+
+</body>
+
+</html>

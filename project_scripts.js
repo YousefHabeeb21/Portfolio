@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentSlide = slides[currentSlideIndex];
         const newSlide = slides[newIndex];
 
-        currentSlide.style.animation = 'slideOutLeftFadeOut .5s forwards';
+        currentSlide.style.animation = 'slideOutLeftFadeOut 1s forwards';
 
         
         newSlide.style.transform = 'translateX(100%)'; 
