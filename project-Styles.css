@@ -213,19 +213,21 @@ body {
 
 
 .info-button {
-    display: flexbox;
+    display: inline-center;
     align-items: center;
+    justify-content: center;
     margin: auto;
     margin-top: 50px; 
     border: none;
-    width: 15%;
-    height: 15%;
-    border-radius: 35%;
+    width: 60px; /* fixed width */
+    height: 60px; /* fixed height */
+    border-radius: 50%; /* fully round */
     background-color: #007BFF; 
     color: white;
     font-size: 25px;
     cursor: pointer;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    text-align: center; /* center the text/icon */
 }
 
 .info-button:hover {
@@ -311,7 +313,7 @@ body {
 }
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 990px) {
 
     .modal-content {
         width: 90%;
