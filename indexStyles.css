@@ -59,15 +59,16 @@ body {
     margin-bottom: auto;
 }
 
-h3 a{
+h4 a{
+    display: inline;
     text-decoration: none;
-   transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
-
-h3:hover{
+h4 {
+    transition: transform 0.3s ease;
+}
+h4:hover{
     transform: scale(1.15);
 }
-
 
 
 
@@ -133,12 +134,14 @@ h3:hover{
     border-radius: 10px;
     font-size: 20px;
     display: inline-block; 
+    transition: transform 0.3s ease;
+
 }
 
 
 #goals .resume-button:hover {
     text-decoration: none; 
-    transform: scale(1.05);
+    transform: scale(1.15);
 }
 
 
@@ -237,7 +240,7 @@ article:hover {
 
 
         #about {
-            padding: 50px;
+            padding: 15px;
         }
 
         .about-content {
@@ -261,7 +264,17 @@ article:hover {
             box-shadow: 0 5px 8px rgba(0,0,0,0.4); 
         }
 
+        h4 a{
+          text-decoration: underline;
+        }
+        h4:hover{
+            transform: scale(1);
+        }
 
+        #goals .resume-button:hover {
+            text-decoration: none; 
+            transform: scale(1);
+        }
         article:hover {
             transform: translateY(0px); 
             box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
@@ -320,6 +333,9 @@ article:hover {
             display: inline-block;
             margin: 20px 50px;
             transition: transform 0.3s ease;
+        }
+        .contact-icons a:hover {
+            transform: scale(1);
         }
           
 
