@@ -507,7 +507,10 @@ footer {
     font-size: 1em;
     color: #333;
     text-align: left;
-    margin-left: 300px;
+    position: relative;
+    top:0;
+    left:10%;
+    /* margin-left: 300px; */
 }
 
 .contact-form input,
