@@ -7,15 +7,15 @@
         width: auto;
     }
     nav a {
-        font-size: 1.5rem;
-        padding:1px;
+        font-size: 2.5rem;
+        padding:10px;
     }
 
 
-    .about-section img {
+    /* .about-section img {
         
         display:none;
-    }
+    } */
     .container {
         padding: 10px;
     }
